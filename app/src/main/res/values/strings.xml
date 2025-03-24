@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CustomRecyclerView</string>
+    <string name="population_text">Population: %d</string>
+</resources>
