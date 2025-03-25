@@ -29,15 +29,13 @@ class CountryAdapter(
         val country = countryList[position]
         holder.countryNameView.text = country.countryName
 
-        // ✅ Use string resource for proper localization
         holder.populationView.text = context.getString(R.string.population_text, country.population)
 
-        // ✅ Safe lookup of drawable resource
         val imageId = context.resources.getIdentifier(country.flagName, "drawable", context.packageName)
         if (imageId != 0) {
             holder.flagView.setImageResource(imageId)
         } else {
-            holder.flagView.setImageResource(R.drawable.ic_launcher_foreground) // Default image
+            holder.flagView.setImageResource(R.drawable.ic_launcher_foreground)
         }
 
         holder.itemView.setOnClickListener { onItemClick(country) }
